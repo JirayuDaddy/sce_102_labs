@@ -1,6 +1,6 @@
 #include <stdio.h>
 
-int main() {
-    printf("Hello, World!\n");
+int main (){
+    printf ("Suparat 2611710142\n");
     return 0;
 }

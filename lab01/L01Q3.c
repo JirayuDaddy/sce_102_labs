@@ -3,8 +3,6 @@
 
 int main()
 {
-    printf("Hello!\n");
-    printf("My name is Pran Meephomru\n");
-    printf("Nice to meet you!\n");
+    printf("Hello! My name is Pran Meephomru Nice to meet you!\n");
     return 0;
 }

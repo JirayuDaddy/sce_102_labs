@@ -1,6 +1,6 @@
 #include <stdio.h>
 
 int main() {
-    printf("Hello, World!\n");
+    printf("Arraya Tayabovorn 2611740016\n");
     return 0;
 }

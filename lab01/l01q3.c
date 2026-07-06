@@ -7,10 +7,8 @@
 int main() 
 
 { 
-
-    
-   printf("Hello\nmynameisthamonwansrisuk\nnicetomeetyou"); 
-    return 0; 
+   printf("Hello!\nMy name is thamonwansrisuk.\nNice to meet you!"); 
+return 0; 
 
 } 
 

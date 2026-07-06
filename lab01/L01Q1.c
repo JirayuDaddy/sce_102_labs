@@ -1,12 +1,4 @@
 #include <stdio.h> 
-<<<<<<< HEAD
-#include <stdlib.h> 
- 
-int main() 
-{ 
-    printf("Hello!\nMy name is Yuta Ueda.\nNice to meet you!\n"); 
-    return 0; 
-=======
 
 #include <stdlib.h> 
 
@@ -22,5 +14,4 @@ int main()
 
     return 0; 
 
->>>>>>> 7529989c34f878a2014565523205df4e65851114
 } 

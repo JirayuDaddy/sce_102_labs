@@ -2,6 +2,6 @@
 #include <stdlib.h>
 
 int main() {
-    printf("Hello!\nMy name is Phatcharaphon.\nNice to meet you!\n");
+    printf("Hello!\nMy name is Phatcharaphon nonthapha.\nNice to meet you!\n");
     return 0;
 }   

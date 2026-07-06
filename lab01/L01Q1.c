@@ -1,17 +1,7 @@
-#include <stdio.h> 
+int main()
+{
+    printf("Hello my world!\n");
+    printf("MAGIC!\n");
+    return 0;
+}
 
-#include <stdlib.h> 
-
- 
-
-int main() 
-
-{ 
-
-    printf("Hello my world!\n"); 
-
-    printf("MAGIC!\n"); 
-
-    return 0; 
-
-} 

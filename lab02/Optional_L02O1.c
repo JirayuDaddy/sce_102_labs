@@ -16,9 +16,9 @@ scanf("\n%f", &height);
 printf("Enter grade: ");
 scanf(" %c", &grade);
 
-printf("\nAge: %d\n", age);
-printf("Height: %.2f\n", height);
-printf("Grade: %c\n", grade);
+printf("\nAge    : %d\n", age);
+printf("Height : %.2f\n", height);
+printf("Grade  : %c\n", grade);
 
 
 

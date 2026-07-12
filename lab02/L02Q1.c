@@ -7,7 +7,7 @@ int birth_year;
 printf("Enter your birth year:");
 scanf("%d", &birth_year);
 
-printf("User age is %d\n", 2024-birth_year);
+printf("\nUser age is %d\n", 2024-birth_year);
 
 
 

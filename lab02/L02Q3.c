@@ -18,6 +18,6 @@ printf("\n%d x 2 = %d", enter_number, enter_number * b);
 printf("\n%d x 3 = %d", enter_number, enter_number * c);
 printf("\n%d x 4 = %d", enter_number, enter_number * d);
 printf("\n%d x 5 = %d", enter_number, enter_number * e);
-printf("\n%d x 6 = %d", enter_number, enter_number * f);
+printf("\n%d x 6 = %d\n\n", enter_number, enter_number * f);
 
 }

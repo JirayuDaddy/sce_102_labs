@@ -7,7 +7,6 @@
 int main() 
 
 { 
-
     printf("MAGIC!\n"); 
 
     printf("Hello my wprld!\n"); 

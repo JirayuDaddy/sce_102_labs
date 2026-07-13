@@ -1,0 +1,22 @@
+#include <studio.h>
+#include <stdlib.h>
+
+int main()
+{
+    int order;
+    float price;
+    char iname;
+    printf("Before\n");
+    printf("order:%d\n",order);
+    printf("price:%F\n",price);
+    printf("iname:%c\n",iname);
+    
+    order = 43;
+    prince = 83.40;
+    iname = 's';
+    printf("\nAfter\n");
+    printf("order:%d\n",order);
+    printf("price:%F\n",price);
+    printf("iname:%c\n",iname);
+    return 0;
+    

@@ -2,6 +2,7 @@
     "tasks": [
         {
             "type": "cppbuild",
+<<<<<<< HEAD
             "label": "C/C++: cl.exe build active file",
             "command": "cl.exe",
             "args": [
@@ -10,12 +11,26 @@
                 "/nologo",
                 "/Fe${fileDirname}\\${fileBasenameNoExtension}.exe",
                 "${file}"
+=======
+            "label": "C/C++: gcc.exe build active file",
+            "command": "C:\\msys64\\ucrt64\\bin\\gcc.exe",
+            "args": [
+                "-fdiagnostics-color=always",
+                "-g",
+                "${file}",
+                "-o",
+                "${fileDirname}\\${fileBasenameNoExtension}.exe"
+>>>>>>> 190febd1c7075341e409e64c2d9dd108c5c1afd4
             ],
             "options": {
                 "cwd": "${fileDirname}"
             },
             "problemMatcher": [
+<<<<<<< HEAD
                 "$msCompile"
+=======
+                "$gcc"
+>>>>>>> 190febd1c7075341e409e64c2d9dd108c5c1afd4
             ],
             "group": {
                 "kind": "build",

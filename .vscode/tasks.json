@@ -3,7 +3,11 @@
         {
             "type": "cppbuild",
             "label": "C/C++: gcc.exe build active file",
+<<<<<<< HEAD
             "command": "C:\\MinGW\\bin\\gcc.exe",
+=======
+            "command": "C:\\msys64\\ucrt64\\bin\\gcc.exe",
+>>>>>>> 190febd1c7075341e409e64c2d9dd108c5c1afd4
             "args": [
                 "-fdiagnostics-color=always",
                 "-g",
@@ -12,7 +16,11 @@
                 "${fileDirname}\\${fileBasenameNoExtension}.exe"
             ],
             "options": {
+<<<<<<< HEAD
                 "cwd": "C:\\MinGW\\bin"
+=======
+                "cwd": "${fileDirname}"
+>>>>>>> 190febd1c7075341e409e64c2d9dd108c5c1afd4
             },
             "problemMatcher": [
                 "$gcc"

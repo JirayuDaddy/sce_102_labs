@@ -1,0 +1,23 @@
+#include <stdio.h>
+#include <math.h>
+
+int main()
+{
+    float x1,x2,x3,x4;
+    float x_rms;
+
+    printf("Enter x1 : ");
+    scanf("%f",&x1);
+    printf("Enter x2 : ");
+    scanf("%f",&x2);
+    printf("Enter x3 : ");
+    scanf("%f",&x3);
+    printf("Enter x4 : ");
+    scanf("%f",&x4);
+
+    x_rms = sqrt(((x1*x1)+(x2*x2)+(x3*x3)+(x4*x4))/4);
+
+    printf("xrms = %.3f",x_rms);
+    return 0;
+    
+}

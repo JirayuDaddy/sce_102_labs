@@ -21,6 +21,7 @@ int main()
     printf("First integer  : |%6d|\n", first_integer);
     printf("Second integer : |%6d|\n", second_integer);
     printf("Real number    : |%6.2f|\n", Real_number);
+    printf("Real number    : |%6.2f|\n", Real_number);
     printf("Character : %c\n", character);
 
     return 0;

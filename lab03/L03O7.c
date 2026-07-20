@@ -3,9 +3,10 @@
 #include <math.h>
 
 int main() {
+
     int x1, x2, x3, x4;
     float xrms;
-    
+
     printf("Enter x1: ");
     scanf("%d", &x1);
     printf("Enter x2: ");
@@ -14,11 +15,11 @@ int main() {
     scanf("%d", &x3);
     printf("Enter x4: ");
     scanf("%d", &x4);
-    
+
     xrms = sqrt((pow(x1, 2) + pow(x2, 2) + pow(x3, 2) + pow(x4, 2)) / 4.0);
-    
+
     printf("\n");
     printf("xrms = %.3f\n", xrms);
-    
+
     return 0;
 }

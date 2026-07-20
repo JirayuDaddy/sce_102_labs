@@ -1,0 +1,22 @@
+#include <stdio.h>
+
+int main() {
+    int x;
+
+    printf("Enter x: ");
+    scanf("%d", &x);
+
+    x = x - 3 / 2;
+    printf("x after eq1 = %d\n", x);
+
+    x = 3 * x + 4 * x - x;
+    printf("x after eq2 = %d\n", x);
+
+    x = 12 * 3 + x;
+    printf("x after eq3 = %d\n", x);
+
+    x = 14 * (7 * 2 - 4) / 3 * x;
+    printf("x after eq4 = %d\n", x);
+
+    return 0;
+}

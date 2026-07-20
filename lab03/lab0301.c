@@ -29,10 +29,5 @@ int main()
     printf("%.2f * %.2f = %.2f\n",f1,f2,f1*f2);
     printf("%.2f / %.2f = %.2f",f1,f2,f1/f2);
 
-
-
-
-
-
-
+    return 0;
 }

@@ -12,7 +12,11 @@
                 "${fileDirname}\\${fileBasenameNoExtension}.exe"
             ],
             "options": {
+<<<<<<< HEAD
                 "cwd": "${fileDirname}"
+=======
+                "cwd": "C:\\msys64\\ucrt64\\bin"
+>>>>>>> 08ef88513956a06105d277add61920aaa84233cb
             },
             "problemMatcher": [
                 "$gcc"

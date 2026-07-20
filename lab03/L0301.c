@@ -12,7 +12,8 @@ int main(){
     scanf("%f",&f1);
     printf("Enter f2: ");
     scanf("%f",&f2);
-    printf("\nResults\n%d + %d = %.2f\n%d - %d = %.2f\n%d * %d = %.2f\n%d / %d = %.2f\n%d %% %d = %.2f",n1,n2,(float)n1+n2,n1,n2,(float)n1-n2,n1,n2,(float)n1*n2,n1,n2,(float)n1/n2,n1,n2,n1%n2);
+    printf("\nResults\n%d + %d = %.2f\n%d - %d = %.2f\n%d * %d = %.2f\n%d / %d = %.2f\n%d %% %d = %.2f"
+        ,n1,n2,(float)n1+n2,n1,n2,(float)n1-n2,n1,n2,(float)n1*n2,n1,n2,(float)n1/n2,n1,n2,n1%n2);
     printf("\n\n%.2f + %.2f = %.2f\n%.2f - %.2f = %.2f\n%.2f * %.2f = %.2f\n%.2f / %.2f = %.2f",f1,f2,f1+f2,f1,f2,f1-f2,f1,f2,f1*f2,f1,f2,f1/f2);
     return 0;
 }

@@ -7,6 +7,7 @@ int main()
     float METER_RATE = 100;
     float INCH_RATE = 2.54;
     float centimeter,millimeter,meter,inch;
+    
     printf("Enter length in centimeter: ");
     scanf("%f",&centimeter);
     millimeter = centimeter * MILLI_RATE;

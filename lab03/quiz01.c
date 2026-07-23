@@ -17,7 +17,7 @@ int main()
     scanf("%d", &quantity);
 
     printf("\nCode  |Name  |Price    |Qty\n");
-    printf("  %d    %c      %.2f     %d\n",code,character,price,quantity);
+    printf("  %d    %c      %.2f     %d\n\n",code,character,price,quantity);
     printf("Total price: %.2f baht",price*quantity);
     return 0;
 }

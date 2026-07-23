@@ -6,6 +6,7 @@ int main()
     int age;
     float heigth;
     char grade;
+    
     printf("Enter age: ");
     scanf("%d",&age);
     printf("Enter heigth: ");

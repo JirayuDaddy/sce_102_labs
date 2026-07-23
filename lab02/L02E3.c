@@ -6,6 +6,7 @@ int main()
     int order; 
     float price; 
     char iname; 
+    
     printf("Snack shop\n\n"); 
     printf("Enter number of order: "); 
     scanf("%d", &order); 

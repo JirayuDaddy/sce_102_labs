@@ -6,6 +6,7 @@ int main()
     int order; 
     float price; 
     char iname; 
+    
     printf("Before\n"); 
     printf("order: %d\n", order); 
     printf("price: %f\n", price); 

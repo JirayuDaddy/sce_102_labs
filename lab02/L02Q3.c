@@ -4,6 +4,7 @@
 int main()
 {
     int number;
+    
     printf("Enter number: ");
     scanf("%d",&number);
     printf("%d x 1 = %d\n",number,number*1);

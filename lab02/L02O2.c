@@ -6,6 +6,7 @@ int main()
     int first_integer,second_integer;
     float real_number;
     char character;
+    
     printf("Enter first integer: ");
     scanf("%d",&first_integer);
     printf("Enter second integer: ");

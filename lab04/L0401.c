@@ -1,0 +1,12 @@
+#include <stdio.h>
+
+int main()
+{
+    int x=0;
+    printf("Enter number x : ");
+    scanf("%d",&x);
+    if (x<0){
+        printf("Minus Number");
+    }
+    return 0;
+}

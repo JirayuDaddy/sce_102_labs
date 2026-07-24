@@ -1,13 +1,31 @@
+
 #include <stdio.h>
-#include <stdlib.h>
 
-int main(){
+int main() {
+    int num;
 
-    float MILLI_RATE = 10;
-    float enter_centi;
+    printf("Enter number x: ");
+    scanf("%d", &num);
 
-    float Millennimeters = enter_centi * MILLI_RATE;
-    scanf("%f", &enter_centi);
-    printf("%f", Millennimeters);
+    if (num < 0) {
+        printf("Minus Number\n");
+    }
+    else if (num == 0) {
+        printf("It's \"Zero\"\n");
+    }
+    else {
+        printf("Plus Number\n");
+
+        if (num > 1000) {
+            printf("\"Very Large Number\"\n");
+        }
+        else if (num > 100) {
+            printf("\"Large Number\"\n");
+        }
+        else {
+            printf("\"Nominal Range\"\n");
+        }
+    }
+
     return 0;
 }

@@ -8,8 +8,8 @@ int main() {
     printf("Enter product code: ");
     scanf("%d", &code);
 
-    printf("Enter product initial (1 character): ");
-    scanf(" %c", &name);   // Space before %c ignores Enter/newline
+    printf("Enter product initial: ");
+    scanf(" %c", &name);
 
     printf("Enter product price: ");
     scanf("%f", &price);

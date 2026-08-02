@@ -8,21 +8,11 @@ int main() {
 
     if (number < 0) {
         printf("Minus Number");
+    } else if (number > 0) {
+        printf("Plus number");
     } else {
-        printf("Just number");
+        printf("It's \"Zero\"");
     }
 
     return 0;
-}
-
-if () {
-
-} else if () {
-
-} else if () {
-
-} else if () {
-    
-} else {
-
 }

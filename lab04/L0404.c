@@ -18,12 +18,7 @@ int main()
         printf("Positive number.\n");
         if (num > 1000)
         {
-
             printf("Very Large Number.\n");
-        }
-        else if (num == 67){
-            printf(" SIX SEVEN.\n");
-            system("start https://youtu.be/Md7kqHsWWs4?si=aMjNQgh5KDRFXf5q");
         }
         else if (num >= 100)
         {

@@ -4,45 +4,30 @@ int main()
 {
     int n, ans, chosen;
     char answer;
-
     printf("Equation :: ans = 15 / 2 + 3 - (14 * n)\n");
     printf("Enter n: ");
     scanf("%d", &n);
-
     ans = 15 / 2 + 3 - (14 * n);
-
     printf("Choices:\n");
-    printf("a) -400\n");
-    printf("b) -410\n");
-    printf("c) -420\n");
-    printf("d) -4100\n\n");
-
+    printf("a) -400\nb) -410\nc) -420\nd) -4100\n\n");
     printf("Enter your answer: ");
     scanf(" %c", &answer);
-
     switch (answer)
     {
-    case 'a':
-        chosen = -400;
+    case 'a':chosen = -400;
         break;
-    case 'b':
-        chosen = -410;
+    case 'b':chosen = -410;
         break;
-    case 'c':
-        chosen = -420;
+    case 'c':chosen = -420;
         break;
-    case 'd':
-        chosen = -4100;
+    case 'd':chosen = -4100;
         break;
-    default:
-        chosen = 0;
+    default:chosen = 0;
         break;
     }
-
     if (chosen == ans)
         printf("Correct answer!\n");
     else
         printf("Wrong answer\n");
-
     return 0;
 }

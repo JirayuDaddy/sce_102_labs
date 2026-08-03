@@ -8,7 +8,7 @@ int main()
     printf("Enter a number for multiplication table: ");
     scanf("%d", &number);
     
-    printf("\n--- Multiplication Table (x1 to x6) ---\n");
+    printf("\n--- Multiplication Table (x1 to x10) ---\n");
 
     printf("%d x 1 = %d\n", number, number * 1);
     printf("%d x 2 = %d\n", number, number * 2);

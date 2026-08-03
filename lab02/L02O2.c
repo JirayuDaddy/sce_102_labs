@@ -3,21 +3,17 @@
  
 int main() 
 {
-    int first_integer; 
-    int second_integer;
-    float F_float ; 
-    char C_character ;
+    int first integer; 
+    int second integer;
+    float ; 
+    char ;
     printf("Enter first integer: "); 
-    scanf("%d", &first_integer); 
+    scanf("%d", &first integer); 
     printf("Enter second integer: "); 
-    scanf("%d", &second_integer); 
+    scanf("%d", &second integer); 
     printf("Enter float : "); 
-    scanf(" %.2f", &F_float); 
+    scanf(" %.2f", &float); 
     printf("Enter character : "); 
-    scanf(" %c", &C_character);
-    printf("\nFirst Integer : |%8d|",first_integer);
-    printf("\nSecond Integer : |%8d|",first_integer);
-    printf("\nFloat Integer : |%8.2f|",first_integer);
-    printf("\nChar Integer : |%8d|",first_integer);
-    return 0;
+    scanf(" %c", &character); 
+
 }

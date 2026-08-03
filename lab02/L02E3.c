@@ -15,5 +15,5 @@ int main()
     scanf(" %c", &iname); 
     printf("\nSnack price %f, ordered %d\n", price, order); 
     printf("Ordered by %c\n", iname); 
-    return 0; 
+    return 0;
 }

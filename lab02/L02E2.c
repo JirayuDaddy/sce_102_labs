@@ -11,5 +11,5 @@ int main()
     printf("order (hex-upper): %X\n", order); 
     printf("price: %f\n", price); 
     printf("iname: %c\n", iname); 
-    return 0; 
-} 
+    return 0;
+}

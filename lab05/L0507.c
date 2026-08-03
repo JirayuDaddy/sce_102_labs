@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <stdlib.h> 
 
 int main() {
     int max_num, i, j;

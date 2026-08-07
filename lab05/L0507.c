@@ -10,7 +10,6 @@ int main() {
 
     printf("Factorial results\n");
 
-    // ---- PART 1: print each factorial expanded ----
     for (start_number = 1; start_number <= number; start_number++) {
         int fact = 1;
 
@@ -23,7 +22,6 @@ int main() {
         printf(" = %d\n", fact);
     }
 
-    // ---- PART 2: print the summary line ----
     printf("\nSummation of factorial results\n");
     for (start_number = 1; start_number <= number; start_number++) {
         int fact = 1;

@@ -2,41 +2,24 @@
 
 int main() {
     int number;
-    int start_number;
-    int number_sum = 0;
+    int sum_number = 1;
+    int start_number = 1;
 
-    printf("Enter the highest number for factorial: ");
+    printf("Enter the number for factorial: ");
     scanf("%d", &number);
 
-    printf("Factorial results\n");
+    for(number; number >= start_number; number--){
+        printf("%d", number);
+    sum_number *= number;
 
-    // ---- PART 1: print each factorial expanded ----
-    for (start_number = 1; start_number <= number; start_number++) {
-        int fact = 1;
-
-        printf("%d! = ", start_number);
-        for (int i = start_number; i >= 1; i--) {
-            fact *= i;
-            printf("%d", i);
-            if (i > 1) printf(" * ");
+        if(number != 1){
+        printf(" * ");
         }
-        printf(" = %d\n", fact);
     }
 
-    // ---- PART 2: print the summary line ----
-    printf("\nSummation of factorial results\n");
-    for (start_number = 1; start_number <= number; start_number++) {
-        int fact = 1;
-        for (int i = start_number; i >= 1; i--) {
-            fact *= i;
-        }
+    printf(" = %d", sum_number);
 
-        printf("%d", fact);
-        number_sum += fact;
-
-        if (start_number < number) printf(" + ");
-    }
-    printf(" = %d\n", number_sum);
+ 
 
     return 0;
 }

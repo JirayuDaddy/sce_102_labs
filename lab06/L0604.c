@@ -57,6 +57,6 @@ int main()
         printf("\nContinue? (y/n): ");
         scanf(" %c", &continuee);
     }
-    while (continuee == 'y' || continuee == 'Y');
+    while (continuee == 'y');
     return 0;
 }

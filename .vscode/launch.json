@@ -8,8 +8,8 @@
       "args": [],
       "stopAtEntry": false,
       "externalConsole": true,
-      "cwd": "c:/Users/SXNSXI/Desktop/sce_102_labs/lab05",
-      "program": "c:/Users/SXNSXI/Desktop/sce_102_labs/lab05/build/Debug/outDebug",
+      "cwd": "c:/Users/SXNSXI/Desktop/sce_102_labs/lab06",
+      "program": "c:/Users/SXNSXI/Desktop/sce_102_labs/lab06/build/Debug/outDebug",
       "MIMode": "gdb",
       "miDebuggerPath": "gdb",
       "setupCommands": [

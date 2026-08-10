@@ -25,7 +25,7 @@ int main() {
         total_score += score;
 
         if (valid_count == 0) {
-           
+    
             max_score = score;
             min_score = score;
             max_student = student_count;

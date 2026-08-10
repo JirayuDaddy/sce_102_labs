@@ -12,3 +12,4 @@ int main()
     printf("price: %f\n", price);
     printf("iname: %c\n", iname);
     return 0;
+}

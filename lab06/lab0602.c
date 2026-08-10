@@ -1,9 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
-#define Rock 1
-#define Scissors 2 
-#define Paper 3
 
 int randomresult()
 {
@@ -65,7 +62,7 @@ int main()
             printf("\nIt's a tie");
         }
         else
-     {
+        {
             printf("\nCPU wins!");
         }
     }

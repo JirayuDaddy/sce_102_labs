@@ -3,13 +3,15 @@
 
 int main()
 {
-    int i<0
+    int number;
+
     do{
         printf("Enter number: ");
-        scanf("%d" ,&i);
-    }while(i<0);
+        scanf("%d", &number);
+
+    }while(number >= 0);
+
+    printf("Data receiving ended");
     return 0;
-    
-    
     
 }

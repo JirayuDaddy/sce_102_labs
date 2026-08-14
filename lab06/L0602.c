@@ -47,7 +47,7 @@ int game(void)
         {
             printf("\nIt's a tie!\n\n");
         }
-        else if ((player == 1 && computer == 3) || (player == 2 && computer == 1) || (player == 3 && computer == 2))
+        else if ((player == 3 && computer == 1) || (player == 2 && computer == 3) || (player == 1 && computer == 2))
         {
             printf("\nPlayer wins!\n");
         }

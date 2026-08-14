@@ -21,7 +21,7 @@ float equation1(int y)
 
 int main()
 {
-    int y =0;
+    int y = 0;
     equation1(y);
     return 0;
 }

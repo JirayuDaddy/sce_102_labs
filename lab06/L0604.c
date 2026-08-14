@@ -29,11 +29,20 @@ int main()
     scanf("%d", &money);
     do
     {
-        printf("\nPlace your bet: ");
-        scanf("%d", &bet);
         do
         {
-            printf("High 'H' (11-18) or low 'L' (3-10): ");
+            printf("\nPlace your bet: ");
+            scanf("%d", &bet);
+            if (bet > money || bet <= 0)
+            {
+                printf("Invalid bet amount, please enter again.\n");
+            }
+        }
+        while (bet > money || bet <= 0);
+
+        do
+        {
+            printf("High 'H' (11-18) or Low 'L' (3-10): ");
             scanf(" %c", &HL);
         }
         while ((HL != 'H') && (HL != 'L'));
@@ -52,6 +61,7 @@ int main()
         printf("Current wallet balance is %d\n", money);
         if (money <= 0)
         {
+            printf("\nGame over, please come again\n");
             break;
         }
         printf("\nContinue? (y/n): ");
@@ -59,4 +69,5 @@ int main()
     }
     while (continuee == 'y');
     return 0;
+    
 }

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 #include <stdio.h>
 #include <stdlib.h>
 
@@ -26,4 +27,34 @@ int main(){
     printf("Highest score :: %d, by student %d\n", sc_ma, n_hi);
     printf("Lowest score :: %d, by student %d\n", sc_mi, n_lo);
     return 0;
+=======
+#include <stdio.h>
+#include <stdlib.h>
+
+int main(){
+    int score=0, sum=0, sc_ma=-9999, sc_mi=9999, n_st=0, n_hi, n_lo;
+    float avg;
+    printf("Student score for calcuator\n\n");
+    while(score>=0){
+        printf("Enter score for student %d:",n_st+1);
+        scanf("%d", &score);
+        if(score>=0){
+        n_st++;
+        sum+=score;
+        if(score>sc_ma){
+            sc_ma=score;
+            n_hi=n_st;
+        }
+        if(score>sc_mi){
+            sc_mi=score;
+            n_lo=n_st;
+        }
+    }
+}
+    avg=(float)sum/n_st;
+    printf("\nAverage score :: %.2f\n",avg);
+    printf("Highest score :: %d, by student %d\n", sc_ma, n_hi);
+    printf("Lowest score :: %d, by student %d\n", sc_mi, n_lo);
+    return 0;
+>>>>>>> b49dcfd2d22634d610dba96f1da2ad43d5909583
 }

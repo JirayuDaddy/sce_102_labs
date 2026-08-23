@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 #include <stdio.h>
 #include <stdlib.h>
 
@@ -12,4 +13,20 @@ int main()
     printf("%d*4 = %d\n",number, number*4);
     printf("%d*5 = %d\n",number, number*5);
     printf("%d*6 = %d\n",number, number*6);
+=======
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+    int number;
+    printf("Enter number:");
+    scanf("%d", &number);
+    printf("%d*1 = %d\n",number, number*1);
+    printf("%d*2 = %d\n",number, number*2);
+    printf("%d*3 = %d\n",number, number*3);
+    printf("%d*4 = %d\n",number, number*4);
+    printf("%d*5 = %d\n",number, number*5);
+    printf("%d*6 = %d\n",number, number*6);
+>>>>>>> b49dcfd2d22634d610dba96f1da2ad43d5909583
 }

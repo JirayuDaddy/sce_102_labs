@@ -59,7 +59,6 @@ int game(void)
     while (player == computer);
 return 0;
 }
-
 int main(){
 printf("Rock - Scissors  - Paper\n\n");
 printf("Rules\n");

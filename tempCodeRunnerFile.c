@@ -1,44 +1,28 @@
 #include <stdio.h>
-#include <stdlib.h>
 
-int main(){
-    int score = 0;
-    int student = 1;
-    int highestStudent = 0;
-    int highestScore = 0;
-    int lowestStudent = 0;
-    int lowestScore = 999;
-    float sum = 0;
 
-    printf("Student score calculator\n\n");
-    do
+int main()
+{
+    int age[10];
+
+    for(int i = 0 ; i < 10 ; i++)
     {
-        printf("Enter score for student %d: ", student);
-        scanf("%d", &score);
+        printf("Enter age fore person #%d: ", i + 1);
+        scanf("%d", &age[i]);
 
-        if(score < 0)
+        if(age[i] < 0)
         {
-            break;
+            printf("ERROR!\n");
+            i -= 1;
         }
-        if(score > highestScore)
-        {
-            highestScore = score;
-            highestStudent = student;
-        }
-        if(score < lowestScore)
-        {
-            lowestScore = score;
-            lowestStudent = student;
-        }
-        student++;
-        sum += score;
+
     }
-    while(score > -1);
+    printf("\n--------\n");
 
-    student--;
-
-    printf("\nAverage score :: %.2f", sum / student);
-    printf("\nHighest score :: %d, by student %d", highestScore, highestStudent);
-    printf("\nLowest score :: %d, by student %d", lowestScore, lowestStudent);
+    for(int i = 9 ; i >= 0 ; i--)
+    {
+        printf("Person #%d age %d\n", i + 1 , age[i]);
+    }
+    
     return 0;
 }

@@ -1,16 +1,14 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
-
 int dice_roll(int *sum)
 {
     *sum = rand() % 6 + 1;
     return *sum; 
 }
-
 void print_board(int position)
 {
-    printf("Board :: ");
+    printf("\nBoard :: ");
     int board[5][5] = {{1, 2, 3, 4, 5}, {6, 7, 8, 9, 10}, {11, 12, 13, 14, 15}, {16, 17, 18, 19, 20}, {21, 22, 23, 24, 25}};
     for(int i = 0 ; i < 5 ; i++)
     {
@@ -30,9 +28,7 @@ void print_board(int position)
             }
         }
     }
-    printf("\n");
 }
-
 int main()
 {
     char choice;
@@ -43,12 +39,12 @@ int main()
     printf("Snake and ladder\n");
 
     print_board(position);
-
+      
     do
     {
         do
         {
-            printf("\nRoll dice?(y): ");
+            printf("\nRoll dice?(y); ");
             scanf(" %c", &choice);
 
             if(choice != 'y')
@@ -57,20 +53,19 @@ int main()
             }
         }
         while(choice != 'y');
-
+        
         dice_roll(&roll);
+        print_board(position);
         position += roll;
+        printf("\nYou got %d\n", roll);
 
         if(position > 25)
         {
             position = 25;
         }
-
-        printf("You got %d\n", roll);
-
         if(position % 10 == 4 && position != 25)
         {
-            printf("You fell back!\n");
+            printf("\nYou fell back!\n");
             position -= 3;
         }
 
@@ -78,12 +73,11 @@ int main()
 
         if(position >= 25)
         {
-            printf("\nFINISH!\n");
+            printf("\n\nFINISH!\n");
             break;
         }
 
     }
-    while(1);
-
+    while(1);    
     return 0;
 }

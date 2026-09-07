@@ -1,2 +1,2 @@
 
-            if (remains == arr[i][j])
+    int atk_player,def_player; 

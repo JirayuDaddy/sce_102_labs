@@ -10,7 +10,7 @@ int main()
 
 for (i = 0; i < 50; i++)
 {
-
+  
  printf("Enter number #%d: ", i + 1);
  scanf("%d", &x[i]);
   if (x[i] <= 0)

@@ -28,73 +28,73 @@ int main ()
 
     while (1)
     {
-    printf("LOGIN SYSTEM\n\n");
-    printf("Username: ");
-    fgets(username, sizeof(username), stdin);
-    newline_remover(username);
+        printf("LOGIN SYSTEM\n\n");
+        printf("Username: ");
+        fgets(username, sizeof(username), stdin);
+        newline_remover(username);
 
-    printf("Password: ");
-    fgets(password, sizeof(password), stdin);
-    newline_remover(password);
+        printf("Password: ");
+        fgets(password, sizeof(password), stdin);
+        newline_remover(password);
 
-    if(strcmp(username,admin_username) == 0 && strcmp(password,admin_password) == 0)
-    {
-        printf("\nWelcom my admin!\n");
-        printf("Change password for users? (y to change): ");
-        scanf(" %c", &choice);
-        if(choice == 'y')
+        if(strcmp(username,admin_username) == 0 && strcmp(password,admin_password) == 0)
         {
-            printf("Selet user to change password\n");
-            printf("1.admin\n");
-            printf("2.user1\n");
-            printf("3.user2\n");
-            printf("Select (1-3): ");
-            do
+            printf("\nWelcom my admin!\n");
+            printf("Change password for users? (y to change): ");
+            scanf(" %c", &choice);
+            if(choice == 'y')
             {
-                scanf("%d", &select_user);
-                if (select_user <= 0 || select_user > 3)
-                    {
-                        printf("Invalid selection, try again\n");
-                        continue;
-                    
-                    }
-            }while (select_user <= 0 || select_user > 3);   
-                
-            getchar();
-            
-            printf("New Password: ");
-            fgets(new_password, sizeof(new_password), stdin);
-            newline_remover(new_password);
-
-                switch (select_user)
+                printf("Selet user to change password\n");
+                printf("1.admin\n");
+                printf("2.user1\n");
+                printf("3.user2\n");
+                printf("Select (1-3): ");
+                do
                 {
-                case 1:
-                    chage_password(admin_password,new_password);
-                    break;
+                    scanf("%d", &select_user);
+                    if (select_user <= 0 || select_user > 3)
+                        {
+                            printf("Invalid selection, try again\n");
+                            continue;
+                        
+                        }
+                }while (select_user <= 0 || select_user > 3);   
                     
-                case 2:
-                    chage_password(user1_password,new_password);
-                    break;
-                case 3:
-                    chage_password(user2_password,new_password);
-                    break;
-                default:
-                    break;
-                }
-                    
+                getchar();
+                
+                printf("New Password: ");
+                fgets(new_password, sizeof(new_password), stdin);
+                newline_remover(new_password);
 
-            printf("\n----RESET----\n"); 
-            continue; 
+                    switch (select_user)
+                    {
+                    case 1:
+                        chage_password(admin_password,new_password);
+                        break;
+                        
+                    case 2:
+                        chage_password(user1_password,new_password);
+                        break;
+                    case 3:
+                        chage_password(user2_password,new_password);
+                        break;
+                    default:
+                        break;
+                    }
+                        
+
+                printf("\n----RESET----\n"); 
+                continue; 
+            }
         }
+        else if((strcmp(username,user1_username) == 0 && strcmp(password,user1_password) == 0) || (strcmp(username,user2_username) == 0 && strcmp(password,user2_password) == 0))
+        {
+            printf("\nWelcome!");
+        }
+        else
+        {
+            printf("\nError Username or Password");
+        }
+        return 0;
     }
-    else if((strcmp(username,user1_username) == 0 && strcmp(password,user1_password) == 0) || (strcmp(username,user2_username) == 0 && strcmp(password,user2_password) == 0))
-    {
-        printf("\nWelcome!");
-    }
-    else
-    {
-        printf("\nError Username or Password");
-    }
-    return 0;
-}
 }

@@ -2,11 +2,13 @@
 
 float speedDistance(float speed, int *time)
 {
-float distance = speed * (*time);
-*time = *time + 3;
-return distance;
+    float distance = speed * (*time);
+    *time = *time + 3;
+    return distance;
 }
-int main(){
+
+int main()
+{
     int time = 1;
     float speed, distance;
     int i;
@@ -14,11 +16,14 @@ int main(){
     printf("Distance calculator\n");
     printf("-----------------------\n");
 
-    for(i=1,i<3,i++){
+    for (i = 1; i <= 3; i++)
+    {
         printf("Enter speed: ");
-        scanf("%.2f",&speed);
-        distance = speedDistance(speed,&time);
-        printf("step %d => distance %.2f, time%d\n",i, distance, time);
+        scanf("%f", &speed);
+
+        distance = speedDistance(speed, &time);
+        printf("step %d => distance %.2f, time %d\n", i, distance, time);
     }
+
     return 0;
 }

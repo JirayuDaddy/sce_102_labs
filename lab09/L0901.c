@@ -1,16 +1,18 @@
 #include <stdio.h>
 
-int main(){
+int main()
+{
     int apple = 17;
-    float meter = 22.38;
+    double meter = 22.38;
     char order = 'k';
 
-    int *x = &apple;
-    float *y = &meter;
-    char *z = &order;
-    
-    printf("apple is %d stored at %p\n",apple,*x);
-    printf("meter is %.2f stored at %p\n",meter,*y);
-    printf("order is %c stored at %p\n",order,*z);
+    int *pA = &apple;
+    double *pM = &meter;
+    char *pO = &order;
+
+    printf("apple is %d, stored at %p\n", *pA, (void *)pA);
+    printf("meter is %.2f, stored at %p\n", *pM, (void *)pM);
+    printf("order is %c, stored at %p\n", *pO, (void *)pO);
+
     return 0;
 }

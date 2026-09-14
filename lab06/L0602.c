@@ -20,7 +20,6 @@ void print_choice(int choice)
 }
 int game(void)
 {
-    
     srand(time(NULL));
     int player = 0, computer = 0;
     do
@@ -59,7 +58,6 @@ int game(void)
     while (player == computer);
 return 0;
 }
-
 int main(){
 printf("Rock - Scissors  - Paper\n\n");
 printf("Rules\n");

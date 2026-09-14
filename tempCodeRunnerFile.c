@@ -1,25 +1,33 @@
 #include <stdio.h>
 
-int main() {
-    int number;
-    int sum_number = 1;
-    int start_number = 1;
+float avgheight(float height[], int i)
+{
+    float sum = 0;
+    for(int number = 0 ; number < i ; number++)
+    {
+        sum += height[number];
+    }
+    return sum / i;
+}
 
-    printf("Enter the number for factorial: ");
-    scanf("%d", &number);
+int main()
+{
+    float height[30];
+    int i = 0;
 
-    for(number; number >= start_number; number--){
-        printf("%d", number);
-    sum_number *= number;
-
-        if(number != 1){
-        printf(" * ");
+    for(i = 0 ; i < 30 ; i++)
+    {
+        printf("Enter height for students #%d: ", i + 1);
+        scanf("%f", &height[i]);
+        
+        if(height[i] <= 0 )
+        {
+            i--;
+            break;
         }
     }
-
-    printf(" = %d", sum_number);
-
- 
-
+    float avg = avg_height(height , i)
+    printf("Average height is %.2f", avg);
+    printf("Number of students is %d", i);
     return 0;
 }

@@ -1,20 +1,3 @@
-<<<<<<< HEAD
-int main ()
-{
-do
-        {
-            printf("\nRoll dice?(y): ");
-            scanf(" %c", &choice);
-
-            if(choice != 'y')
-            {
-                printf("Error input\n");
-            }
-        }
-        while(choice != 'y');
-return 0;
-    }
-=======
 #include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
@@ -104,4 +87,3 @@ int main()
 
     return 0;
 }
->>>>>>> 1caa5ae1df6216cf1fd387bda10460a450603952

@@ -11,4 +11,5 @@ int main (){
     for(int i = 0;i<12;i++){
         printf(" %d",*(p+i)*24);
     }
+    return 0;
 }

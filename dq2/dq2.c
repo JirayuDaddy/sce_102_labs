@@ -66,7 +66,6 @@ int main()
     }
 
     total = totalScore(scores[student - 1], 3);
-
     printf("\nTotal Score:: %d\n", total);
 
     if (total >= 150)

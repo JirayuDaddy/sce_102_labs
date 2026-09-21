@@ -13,12 +13,9 @@ int main()
     m = &meter;
     o = &order;
 
-
-
-    printf("apple is %d, stored at %p\n",apple,p);
-    printf("meter is %.2f, stored at %p\n",meter,m);
-    printf("order is %c, stored at %p\n",order,o);
+    printf("apple is %d, stored at %p\n", apple, p);
+    printf("meter is %.2f, stored at %p\n", meter, m);
+    printf("order is %c, stored at %p\n", order, o);
 
     return 0;
-
 }

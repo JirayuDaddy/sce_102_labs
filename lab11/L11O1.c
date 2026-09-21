@@ -21,7 +21,7 @@ int main()
         scanf(" %c",&choice);
         if(choice == 'y')
         {
-            printf("Yous got ");
+            printf("You got ");
             for(int i = 0 ; i<=4 ; i++)
             {   
                 struct card new_card[5];

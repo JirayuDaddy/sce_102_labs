@@ -1,87 +1,190 @@
-#include <stdio.h>  // เรียกใช้ไลบรารี stdio.h เพื่อใช้ printf() และ scanf()
+#include <stdio.h>      // เรียกใช้ไลบรารีสำหรับ printf() และ scanf()
+#include <stdlib.h>     // เรียกใช้ rand() และ srand() สำหรับการสุ่มตัวเลข
+#include <time.h>       // เรียกใช้ time() เพื่อสร้างค่าเริ่มต้นในการสุ่ม
 
-// ฟังก์ชัน swap ใช้สำหรับสลับค่าของตัวแปร 2 ตัว
-void swap(int *a, int *b)
+
+// ฟังก์ชัน printBoard ใช้สำหรับแสดงกระดาน
+// board = address ของ array board
+// player = address ของตัวแปร player
+void printBoard(int *board, int *player)
 {
-    int temp;  // สร้างตัวแปร temp ไว้เก็บค่าชั่วคราว
+    int i;  // สร้างตัวแปร i สำหรับใช้เป็นตัวนับรอบของ for
 
-    temp = *a;  // เก็บค่าที่ a ชี้อยู่ไว้ใน temp
-    *a = *b;    // เอาค่าที่ b ชี้อยู่ ไปใส่ในตัวแปรที่ a ชี้อยู่
-    *b = temp;  // เอาค่าเดิมของ a ที่เก็บไว้ใน temp ไปใส่ใน b
+    printf("Board :: ");  // แสดงข้อความ Board ::
+
+    // วนลูปตั้งแต่ i = 0 จนถึง i = 24
+    // เพราะ Board มีทั้งหมด 25 ช่อง
+    for (i = 0; i < 25; i++)
+    {
+        // *(board + i) หมายถึงค่าของ board ที่ตำแหน่ง i
+        // ตรวจสอบว่าช่องบน Board ตรงกับตำแหน่งของ Player หรือไม่
+        if (*(board + i) == *player)
+        {
+            // ถ้าตรงกับตำแหน่ง Player
+            // จะแสดงตัวเลขไว้ในวงเล็บ เช่น (5)
+            printf("(%d) ", *(board + i));
+        }
+
+        // ตรวจสอบว่าช่องนั้นเป็นช่อง Snake หรือไม่
+        // Snake อยู่ที่ช่อง 4, 14 และ 24
+        else if (*(board + i) == 4 ||
+                 *(board + i) == 14 ||
+                 *(board + i) == 24)
+        {
+            // ถ้าเป็นช่อง Snake
+            // จะแสดงตัวเลขแบบ _4_ หรือ _14_ หรือ _24_
+            printf("_%d_ ", *(board + i));
+        }
+
+        else
+        {
+            // ถ้าไม่ใช่ตำแหน่ง Player และไม่ใช่ช่อง Snake
+            // แสดงตัวเลขปกติ
+            printf("%d ", *(board + i));
+        }
+    }
+
+    printf("\n");  // ขึ้นบรรทัดใหม่หลังจากแสดง Board เสร็จ
 }
+
 
 int main()
 {
-    int playerATK = 1100;  // สร้างตัวแปร ATK ของผู้เล่น และกำหนดค่าเริ่มต้นเป็น 1100
-    int playerDEF = 2500;  // สร้างตัวแปร DEF ของผู้เล่น และกำหนดค่าเริ่มต้นเป็น 2500
+    int board[25];  // สร้าง Array ชื่อ board จำนวน 25 ช่อง
+    int player = 1; // กำหนดตำแหน่งเริ่มต้นของ Player เป็นช่องที่ 1
+    int dice;       // สร้างตัวแปร dice สำหรับเก็บผลการทอยลูกเต๋า
+    char choice;    // สร้างตัวแปร choice สำหรับรับ y หรือ Y
+    int i;          // สร้างตัวแปร i สำหรับใช้ใน for loop
 
-    int opponentATK = 800;   // สร้างตัวแปร ATK ของคู่ต่อสู้ และกำหนดค่าเป็น 800
-    int opponentDEF = 1700;  // สร้างตัวแปร DEF ของคู่ต่อสู้ และกำหนดค่าเป็น 1700
 
-    char choice;  // สร้างตัวแปรชนิด char เพื่อเก็บตัวอักษรที่ผู้ใช้ป้อน
+    // กำหนดค่าเริ่มต้นให้ระบบสุ่ม
+    // time(NULL) จะใช้เวลาปัจจุบันเป็นค่าเริ่มต้น
+    // ทำให้การสุ่มแต่ละครั้งมีโอกาสได้เลขต่างกัน
+    srand(time(NULL));
 
-    printf("Card Battle!\n\n");  // แสดงชื่อเกม และขึ้นบรรทัดใหม่ 2 ครั้ง
 
-    printf("Player\n");  // แสดงคำว่า Player
-    printf("------\n");  // แสดงเส้น ------ ใต้คำว่า Player
-    printf("ATK :: %d    DEF :: %d\n\n", playerATK, playerDEF);
-    // %d ใช้แสดงค่าของ int
-    // %d ตัวแรก = playerATK
-    // %d ตัวที่สอง = playerDEF
+    /* สร้าง Board 1 - 25 */
 
-    printf("Opponent\n");  // แสดงคำว่า Opponent
-    printf("--------\n");  // แสดงเส้น -------- ใต้คำว่า Opponent
-    printf("ATK :: %d    DEF :: %d\n\n", opponentATK, opponentDEF);
-    // แสดงค่า ATK และ DEF ของคู่ต่อสู้
-
-    printf("Switch player's ATK and DEF? (y/n): ");
-    // ถามผู้ใช้ว่าต้องการสลับ ATK กับ DEF หรือไม่
-
-    scanf(" %c", &choice);
-    // รับตัวอักษรจากผู้ใช้
-    // %c = รับข้อมูลชนิด char
-    // &choice = ส่ง address ของ choice ให้ scanf นำค่าที่รับมาไปเก็บ
-
-    if (choice == 'y' || choice == 'Y')
-    // ถ้า choice เป็น y หรือ Y
-    // == ใช้เปรียบเทียบ
-    // || หมายถึง หรือ
+    // วนลูป 25 รอบ
+    // i จะมีค่าตั้งแต่ 0 ถึง 24
+    for (i = 0; i < 25; i++)
     {
-        swap(&playerATK, &playerDEF);
-        // ส่ง address ของ playerATK และ playerDEF ไปให้ฟังก์ชัน swap
-        // เพื่อสลับค่าของ ATK กับ DEF
+        // board[0] = 1
+        // board[1] = 2
+        // board[2] = 3
+        // ...
+        // board[24] = 25
+        board[i] = i + 1;
     }
 
-    printf("\nPlayer\n");  // ขึ้นบรรทัดใหม่แล้วแสดง Player
-    printf("------\n");  // แสดงเส้น ------
 
-    printf("ATK :: %d    DEF :: %d\n\n", playerATK, playerDEF);
-    // แสดงค่า ATK และ DEF ของ Player หลังจากสลับหรือไม่สลับ
+    printf("Snake and Ladder\n");
+    // แสดงชื่อเกม
 
-    printf("Attack calculating ATK vs ATK\n");
-    // แสดงข้อความว่ากำลังเปรียบเทียบ ATK ของทั้งสองฝ่าย
 
-    if (playerATK > opponentATK)
-    // ถ้า ATK ของ Player มากกว่า ATK ของ Opponent
+    // while จะทำงานตราบใดที่ player ยังอยู่ก่อนช่องที่ 25
+    // ถ้า player = 25 เงื่อนไขจะเป็นเท็จและออกจาก loop
+    while (player < 25)
     {
-        printf("Opponent destroyed!\n");
-        // แสดงว่า Opponent ถูกทำลาย
+        // เรียกฟังก์ชัน printBoard
+        // ส่ง board และ address ของ player เข้าไป
+        printBoard(board, &player);
+
+
+        printf("Roll dice?(y): ");
+        // ถามผู้เล่นว่าต้องการทอยลูกเต๋าหรือไม่
+
+
+        scanf(" %c", &choice);
+        // รับตัวอักษรจากผู้ใช้
+        // %c = รับข้อมูลชนิด char
+        // &choice = ส่ง address ของ choice ให้ scanf
+
+
+        // ตรวจสอบว่าผู้ใช้พิมพ์ y หรือ Y หรือไม่
+        // != หมายถึง "ไม่เท่ากับ"
+        // && หมายถึง "และ"
+        if (choice != 'y' && choice != 'Y')
+        {
+            // ถ้าไม่ได้พิมพ์ y หรือ Y
+            // แสดงข้อความ Error
+            printf("Error input\n");
+
+            // continue = ข้ามคำสั่งที่เหลือในรอบนี้
+            // แล้วกลับไปเริ่ม while รอบใหม่ทันที
+            continue;
+        }
+
+
+        /* สุ่มลูกเต๋า 1 - 6 */
+
+        // rand() สุ่มตัวเลข
+        // % 6 ทำให้ผลลัพธ์เหลือ 0 - 5
+        // + 1 ทำให้กลายเป็น 1 - 6
+        // ดังนั้น dice จะมีค่า 1, 2, 3, 4, 5 หรือ 6
+        dice = rand() % 6 + 1;
+
+
+        printf("You got %d\n", dice);
+        // แสดงผลว่าทอยลูกเต๋าได้เลขอะไร
+
+
+        /* เดิน */
+
+        // เอาค่าที่ทอยได้ไปเพิ่มตำแหน่ง Player
+        // เช่น player อยู่ช่อง 5 และ dice = 3
+        // player จะกลายเป็น 8
+        player += dice;
+
+
+        /* ถ้าถึงหรือเกิน 25 ให้จบที่ 25 */
+
+        // ตรวจสอบว่า Player เดินถึงหรือเกินช่อง 25 หรือไม่
+        if (player >= 25)
+        {
+            // ถ้าเกิน 25 ให้กำหนดตำแหน่งเป็น 25
+            // เช่น player = 27 ก็จะกลายเป็น 25
+            player = 25;
+
+
+            // แสดง Board โดยให้เห็น Player อยู่ช่อง 25
+            printBoard(board, &player);
+
+
+            // break = ออกจาก while loop ทันที
+            break;
+        }
+
+
+        /* Snake: ช่อง 4, 14, 24 ถอยหลัง 3 ช่อง */
+
+        // ตรวจสอบว่า Player ไปตกช่อง Snake หรือไม่
+        // Snake อยู่ที่ช่อง 4, 14 และ 24
+        if (player == 4 || player == 14 || player == 24)
+        {
+            // ถ้าอยู่ช่อง Snake ให้ถอยหลัง 3 ช่อง
+            // เช่น 14 -> 11
+            // เช่น 24 -> 21
+            player -= 3;
+        }
+
+
+        // แสดง Board หลังจาก Player เดินเสร็จ
+        // และถอยหลังถ้าเจอ Snake
+        printBoard(board, &player);
+
+
+        printf("\n");
+        // เว้นบรรทัดเพื่อให้อ่านง่าย
     }
 
-    else if (playerATK < opponentATK)
-    // ถ้า ATK ของ Player น้อยกว่า ATK ของ Opponent
-    {
-        printf("Player destroyed!\n");
-        // แสดงว่า Player ถูกทำลาย
-    }
 
-    else
-    // ถ้าเงื่อนไขด้านบนไม่เป็นจริง
-    // แปลว่า ATK ของทั้งสองฝ่ายเท่ากัน
-    {
-        printf("Draw!\n");
-        // แสดงผลว่าเสมอ
-    }
+    // เมื่อ Player ถึงช่อง 25
+    // แสดงข้อความ FINISH!
+    printf("FINISH!\n");
 
-    return 0;  // จบการทำงานของโปรแกรมและส่งค่า 0 กลับไป
+
+    // ส่งค่า 0 กลับไป
+    // หมายถึงโปรแกรมทำงานเสร็จสมบูรณ์
+    return 0;
 }

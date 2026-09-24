@@ -34,14 +34,14 @@ int main(){
     } else if (engine_choice == 'B' || engine_choice == 'b') {
         mSpeed = 110.0;
         eWeight = 250.8;
-    } else { // ถ้าไม่ใช่ A หรือ B ก็ถือว่าเป็น C 
+    } else {
         mSpeed = 184.63;
         eWeight = 535.64;
     }
     if (type_choice == 1) {
         bWeight = 529.8;
         tSize = 44.32;
-    } else { // ถ้าไม่ใช่ 1 ก็ถือว่าเป็น 2
+    } else {
         bWeight = 633.4;
         tSize = 57.46;
     }

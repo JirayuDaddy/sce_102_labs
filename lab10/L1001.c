@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 #include <stdio.h>
 
 int main(){
@@ -6,4 +7,14 @@ int main(){
     printf("%s\n",s1);
     printf("%s\n",s2);
     return 0;
+=======
+#include <stdio.h>
+
+int main(){
+    char s1[6]={'D','i','a','n','a','\0'};
+    char s2[]="Diana";
+    printf("%s\n",s1);
+    printf("%s\n",s2);
+    return 0;
+>>>>>>> a08679c (lab10 submission)
 }

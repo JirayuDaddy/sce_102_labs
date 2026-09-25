@@ -15,8 +15,9 @@ int main(){
     printf("-----------------------------\n");
     for (int i = 0; i < 3; i++)
     {
+        printf("Car #%d\n",i+1);
         printf("Enter color: ");
-        scanf("%s",cars[i].color)
+        scanf("%s",cars[i].color);
         printf("Enter max speed: ");
         scanf("%f", &cars[i].maxSpeed);
         printf("Enter weight: ");
@@ -31,7 +32,7 @@ int main(){
     printf("-----------------------------\n");
     for (int i = 0; i < 3; i++)
     {
-    printf("Car #%d properties\n", i + 1);
+    printf("Car #%d properties\n",i+1);
     printf("----------------\n");
     printf("%s\n",cars[i].color);
     printf("%.2f\n",cars[i].maxSpeed);

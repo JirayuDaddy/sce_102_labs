@@ -16,7 +16,8 @@ typedef struct {
     int score;        // Total overall score
     int rounds_won;   // Number of rounds won in this match
     int is_bot;       // 1 if Bot, 0 if Human
-} Player;
+} 
+Player;
 
 // Global variables for game board and move history tracking
 char board[SIZE][SIZE];
@@ -31,6 +32,7 @@ void displayBoard();
 int getPlayerIndex(char player);
 int makeMove(char player, int row, int col);
 int checkWin(char player);
+
 void getBotMove(int *row, int *col);
 void playGame(Player p1, Player p2);
 
@@ -41,10 +43,10 @@ void clearBuffer() {
 }
 
 // Reset the board with empty spaces
-void initializeBoard() {
-    for (int row = 0; row < SIZE; row++) {
-        for (int col = 0; col < SIZE; col++) {
-            board[row][col] = ' ';
+void initializeBoard(){
+    for (int row = 0; row < SIZE; row++)
+{
+        for (int col = 0; col < SIZE; col++) { board[row][col] = ' ';
         }
     }
     moveCount[0] = 0;
@@ -54,9 +56,11 @@ void initializeBoard() {
 // Display the current state of the board
 void displayBoard() {
     printf("\n   1   2   3\n");
-    for (int row = 0; row < SIZE; row++) {
+    for (int row = 0; row < SIZE; row++)
+{
         printf("%d  ", row + 1);
-        for (int col = 0; col < SIZE; col++) {
+        for (int col = 0; col < SIZE; col++) 
+{
             printf("%c", board[row][col]);
             if (col < SIZE - 1) printf(" | ");
         }
@@ -71,7 +75,8 @@ int getPlayerIndex(char player) {
 }
 
 // Handles placing pieces and removing the oldest piece if count > 3
-int makeMove(char player, int row, int col) {
+int makeMove(char player, int row, int col) 
+{
     if (row < 0 || row >= SIZE || col < 0 || col >= SIZE) {
         printf(" Invalid position! Please enter numbers between 1 and 3.\n");
         return 0;
@@ -79,6 +84,7 @@ int makeMove(char player, int row, int col) {
 
     if (board[row][col] != ' ') {
         printf(" That cell is already occupied!\n");
+
         return 0;
     }
 
